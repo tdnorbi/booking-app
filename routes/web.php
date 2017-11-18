@@ -16,7 +16,8 @@ Route::get('/', function () {
 });
 
 //List Accommodations
-Route::get('/accommodations', 'AccommodationController@index');
+//Route::get('/accommodations', 'AccommodationController@index');
+Route::resource('accommodations','AccommodationController');
 
 //Rooms
 Route::get('/rooms', 'RoomController@index');
