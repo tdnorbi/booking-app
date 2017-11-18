@@ -15,6 +15,16 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+//List Accommodations
+Route::get('/accommodations', 'AccommodationController@index');
+
+//Rooms
+Route::get('/rooms', 'RoomController@index');
+
+// List Bookings
+//Route::get('/bookings', 'BookingController@index');
+Route::resource('bookings','BookingController');
+
 Route::get('/demo', function () {
     return view('demo');
 });
@@ -22,3 +32,5 @@ Route::get('/demo', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
