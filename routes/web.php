@@ -21,6 +21,8 @@ Route::resource('accommodations','AccommodationController');
 
 //Rooms
 Route::get('/rooms', 'RoomController@index');
+Route::get('/rooms/create/{accommodation}', 'RoomController@create');
+Route::post('/rooms', 'RoomController@store');
 
 // List Bookings
 //Route::get('/bookings', 'BookingController@index');
